@@ -1,0 +1,41 @@
+apiVersion: v1
+items:
+- apiVersion: redhatcop.redhat.io/v1alpha1
+  kind: PodPreset
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"redhatcop.redhat.io/v1alpha1","kind":"PodPreset","metadata":{"annotations":{},"name":"network-proxy","namespace":"monitoring"},"spec":{"env":[{"name":"http_proxy","value":"http://10.130.42.173:3128"},{"name":"https_proxy","value":"http://10.130.42.173:3128"},{"name":"no_proxy","value":"localhost,127.0.0.1,10.0.0.0/8,.svc,.svc.cluster.local,.cluster.local,.picc-inv.com,picc-dmp-admin.myspacex.cn,picc-dmp.myspacex.cn,picc-dmp-openapi.myspacex.cn"}]}}
+    creationTimestamp: "2023-07-17T02:38:02Z"
+    generation: 1
+    managedFields:
+    - apiVersion: redhatcop.redhat.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:env: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2023-07-17T02:38:02Z"
+    name: network-proxy
+    namespace: monitoring
+    resourceVersion: "294051547"
+    selfLink: /apis/redhatcop.redhat.io/v1alpha1/namespaces/monitoring/podpresets/network-proxy
+    uid: 4eaf3489-9af5-45f5-8a51-56bd5c33e308
+  spec:
+    env:
+    - name: http_proxy
+      value: http://10.130.42.173:3128
+    - name: https_proxy
+      value: http://10.130.42.173:3128
+    - name: no_proxy
+      value: localhost,127.0.0.1,10.0.0.0/8,.svc,.svc.cluster.local,.cluster.local,.picc-inv.com,picc-dmp-admin.myspacex.cn,picc-dmp.myspacex.cn,picc-dmp-openapi.myspacex.cn
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
